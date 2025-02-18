@@ -11,14 +11,38 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      */
+
     public function index()
     {
-        Post::create(
-            [
-                ''
-            ]
-        );
+       
+        $post = Post::find(9);
+        $post->delete();
+
+
+
+       // dd($post);
+
         
+        
+        //dd($post);\
+
+        //.....
+
+        // Post::create(
+
+        //     [
+        //        'title' => 'test title',
+        //        'slug' => 'test slug',
+        //        'content' => 'test contet',
+        //        'category_id' => 1,
+        //        'description' => 'test description',
+        //        'posted' => 'not',
+        //        'image' => 'test image',
+
+        //     ]
+          
+        // );  
+
         return 'index';
     }
 
