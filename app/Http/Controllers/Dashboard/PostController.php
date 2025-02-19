@@ -49,9 +49,10 @@ class PostController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+
+    public function create() //pintar el formulario que se consuma  via get 
     {
-        $categories = Category::pluck('id','title');
+        $categories = Category::pluck('id','title');  //para consultar solo ciertos campos db
 
         return view('dashboard.post.create', compact('categories'));
     }
@@ -59,9 +60,10 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request) //procesar el formulario post
     {
-        //
+        //dd(request()->get('title'));
+        // dd($request->all()['title']);
     }
 
     /**

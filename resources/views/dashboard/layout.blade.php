@@ -8,9 +8,9 @@
 </head>
 <body>
     
-    @yield('content');
+    @yield('content')
     <section>
-        @yield('morecontent');
+        @yield('morecontent')
     </section>
 
 </body>

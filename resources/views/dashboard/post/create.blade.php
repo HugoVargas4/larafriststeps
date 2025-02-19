@@ -1,7 +1,10 @@
 @extends('dashboard.layout')
 
 @section('content')
-    <form action="" method="post">
+
+    <form action=" {{ route('post.store')}}" method="post">
+
+        @csrf {{--proteccion al ataque de ese tipo --}}
 
         <label for="">Title</label>    
         <input type="text" name="title">
@@ -32,4 +35,5 @@
 
         <button type="submit">Send</button>
     </form>
+
 @endsection
